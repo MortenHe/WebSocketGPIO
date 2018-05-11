@@ -17,12 +17,16 @@ ws.on('open', function open() {
 
         //Nachricht kommt als String -> in JSON Objekt konvertieren
         var obj = JSON.parse(message);
-        console.log("received: " + message.type);
 
-        //LED kurz an
-        led.writeSync(1);
-        setTimeout(function () {
-            led.writeSync(0);
-        }, 200);
+        //Ausser bei Zeitaenderung
+        if (obj.type !== "time") {
+            console.log("received: " + obj.type);
+
+            //LED kurz an
+            led.writeSync(1);
+            setTimeout(function () {
+                led.writeSync(0);
+            }, 200);
+        }
     });
 });
