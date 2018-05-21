@@ -6,13 +6,13 @@ const ws = new WebSocket('ws://localhost:8080');
 const Gpio = require('onoff').Gpio;
 
 //Previous-Button
-const buttonPrevious = new Gpio(4, 'in', 'rising', { debounceTimeout: 10 });
+const buttonPrevious = new Gpio(15, 'in', 'rising', { debounceTimeout: 10 });
 
 //Pause-Button
 const buttonPause = new Gpio(14, 'in', 'rising', { debounceTimeout: 10 });
 
 //Next-Button
-const buttonNext = new Gpio(15, 'in', 'rising', { debounceTimeout: 10 });
+const buttonNext = new Gpio(4, 'in', 'rising', { debounceTimeout: 10 });
 
 //Wenn Verbindung mit WSS hergestellt wird
 ws.on('open', function open() {
@@ -30,7 +30,7 @@ ws.on('open', function open() {
     });
 
     //Wenn Button gedrueckt wird -> Pause / Unpuase
-    buttonNext.watch(function (err, value) {
+    buttonPause.watch(function (err, value) {
         console.log("toggle paused");
 
         //Nachricht an WSS schicken
