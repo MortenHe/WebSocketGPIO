@@ -54,6 +54,9 @@ ws.on('open', function open() {
 
         //Mit welchem Namen soll die Datei dargestellt werden
         messageObj.name = cardData.name;
+
+        //Bei Videos immer ein Array schicken (weil es in der Web-Oberflaeche auch die Moeglichkeit gibt eine Liste von Video zu schicken)
+        messageObj = [messageObj];
     }
 
     //Nachricht an WSS schicken
