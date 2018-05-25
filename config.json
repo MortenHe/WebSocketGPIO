@@ -1,0 +1,26 @@
+{
+    "audio": {
+        "278820847058": {
+            "mode": "hsp",
+            "path": "janosch/emil-gruenbaer",
+            "allowRandom": false
+        },
+        "229747144066": {
+            "mode": "kindermusik",
+            "path": "rz/starke-kinder",
+            "allowRandom": true
+        }
+    },
+    "video": {
+        "278820847058": {
+            "mode": "kinder",
+            "path": "misc/vid1.mp4",
+            "name": "Andis Welt - Hier bin ich"
+        },
+        "229747144066": {
+            "mode": "kinder",
+            "path": "bebl/bebl-bananendieb.mp4",
+            "name": "Benjamin Blümchen - Der Bananendieb"
+        }
+    }
+}
