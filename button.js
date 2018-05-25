@@ -24,7 +24,7 @@ ws.on('open', function open() {
 
         //Nachricht an WSS schicken
         ws.send(JSON.stringify({
-            type: "change-song",
+            type: "change-item",
             value: false
         }));
     });
@@ -46,7 +46,7 @@ ws.on('open', function open() {
 
         //Nachricht an WSS schicken
         ws.send(JSON.stringify({
-            type: "change-song",
+            type: "change-item",
             value: true
         }));
     });
