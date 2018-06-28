@@ -14,6 +14,9 @@ const buttonPause = new Gpio(14, 'in', 'rising', { debounceTimeout: 10 });
 //Next-Button
 const buttonNext = new Gpio(4, 'in', 'rising', { debounceTimeout: 10 });
 
+//Random-Button
+const buttonRandom = new Gpio(23, 'in', 'rising', { debounceTimeout: 10 });
+
 //Wenn Verbindung mit WSS hergestellt wird
 ws.on('open', function open() {
     console.log("connected to wss");
@@ -48,6 +51,17 @@ ws.on('open', function open() {
         ws.send(JSON.stringify({
             type: "change-item",
             value: true
+        }));
+    });
+
+    //Wenn Button gedrueckt wurd -> random toggeln
+    buttonRandom.watch(function (err, value) {
+        console.log("toggle random");
+
+        //Nachricht an WSS schicken
+        ws.send(JSON.stringify({
+            type: "toggle-random",
+            value: ""
         }));
     });
 });

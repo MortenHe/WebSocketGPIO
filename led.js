@@ -5,8 +5,8 @@ const ws = new WebSocket('ws://localhost:8080');
 //GPIO Bibliothek laden
 const Gpio = require('onoff').Gpio;
 
-//LED 16, 20, 21
-const led = new Gpio(21, 'out');
+//LED 16
+const led = new Gpio(16, 'out');
 
 //Wenn Verbindung mit WSS hergestellt wird
 ws.on('open', function open() {
@@ -18,15 +18,12 @@ ws.on('open', function open() {
         //Nachricht kommt als String -> in JSON Objekt konvertieren
         var obj = JSON.parse(message);
 
-        //Ausser bei Zeitaenderung
-        if (obj.type !== "time") {
-            console.log("received: " + obj.type);
+        //Wenn aktueller Random-Wert geliefert wird
+        if (obj.type === "toggle-random") {
+            console.log("random is: " + obj.value);
 
-            //LED kurz an
-            led.writeSync(1);
-            setTimeout(function () {
-                led.writeSync(0);
-            }, 200);
+            //LED an / aus
+            led.writeSync(obj.value);
         }
     });
 });
