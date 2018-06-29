@@ -15,7 +15,7 @@ const buttonPause = new Gpio(14, 'in', 'rising', { debounceTimeout: 10 });
 const buttonNext = new Gpio(4, 'in', 'rising', { debounceTimeout: 10 });
 
 //Random-Button
-const buttonRandom = new Gpio(23, 'in', 'rising', { debounceTimeout: 10 });
+const buttonRandom = new Gpio(16, 'in', 'rising', { debounceTimeout: 10 });
 
 //Wenn Verbindung mit WSS hergestellt wird
 ws.on('open', function open() {
