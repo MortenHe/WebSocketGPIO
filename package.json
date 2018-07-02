@@ -12,6 +12,8 @@
     "fs-extra": "^6.0.1",
     "node-rfid": "^1.0.7",
     "onoff": "^3.0.2",
+    "raspi": "^5.0.2",
+    "raspi-rotary-encoder": "^0.4.0",
     "ws": "^5.1.1"
   }
 }
