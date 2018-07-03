@@ -1,13 +1,28 @@
 {
     "audio": {
-        "278820847058": {
+        "40eb047d": {
             "mode": "hsp",
             "path": "janosch/emil-gruenbaer",
             "allowRandom": false
         },
-        "229747144066": {
+        "357dff35": {
             "mode": "kindermusik",
             "path": "rz/starke-kinder",
+            "allowRandom": true
+        },
+        "10a0405d": {
+            "mode": "kindermusik",
+            "path": "misc/check",
+            "allowRandom": true
+        },
+        "10253c5d": {
+            "mode": "musikmh",
+            "path": "musical/pdo-hamburg",
+            "allowRandom": true
+        },
+        "40413d5d": {
+            "mode": "musikmh",
+            "path": "beatles/hard-days-night",
             "allowRandom": true
         }
     },
