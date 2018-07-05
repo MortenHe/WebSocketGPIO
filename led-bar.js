@@ -7,8 +7,8 @@ const Gpio = require('onoff').Gpio;
 
 //LEDs anlegen
 const led_10 = new Gpio(22, 'out');
-const led_20 = new Gpio(24, 'out');
-const led_30 = new Gpio(7, 'out');
+const led_20 = new Gpio(23, 'out');
+const led_30 = new Gpio(24, 'out');
 const led_40 = new Gpio(5, 'out');
 const led_50 = new Gpio(12, 'out');
 const led_60 = new Gpio(6, 'out');
