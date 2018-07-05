@@ -6,16 +6,16 @@ const ws = new WebSocket('ws://localhost:8080');
 const Gpio = require('onoff').Gpio;
 
 //LEDs anlegen
-const led_10 = new Gpio(21, 'out');
-const led_20 = new Gpio(26, 'out');
-const led_30 = new Gpio(19, 'out');
-const led_40 = new Gpio(13, 'out');
-const led_50 = new Gpio(16, 'out');
-const led_60 = new Gpio(12, 'out');
-const led_70 = new Gpio(5, 'out');
-const led_80 = new Gpio(7, 'out');
-const led_90 = new Gpio(24, 'out');
-const led_100 = new Gpio(22, 'out');
+const led_10 = new Gpio(22, 'out');
+const led_20 = new Gpio(24, 'out');
+const led_30 = new Gpio(7, 'out');
+const led_40 = new Gpio(5, 'out');
+const led_50 = new Gpio(12, 'out');
+const led_60 = new Gpio(6, 'out');
+const led_70 = new Gpio(13, 'out');
+const led_80 = new Gpio(19, 'out');
+const led_90 = new Gpio(26, 'out');
+const led_100 = new Gpio(21, 'out');
 
 //LEDs in Array verwalten
 const ledArray = [led_10, led_20, led_30, led_40, led_50, led_60, led_70, led_80, led_90, led_100];
